@@ -20,31 +20,31 @@ char txt [4];
 
 void interrupt() //se ha pulsado una tecla
 {
-if(aux)
-{
-  ByteToStr (num, txt);
-  Lcd_out(1,1, txt);
-  num++;
-  if(num == 100)
-   num = 0;
-}
-aux=!aux;
-x=PORTB; //hay que leer el puerto B para poder borrar el bit RBIF (define x global)
-INTCON.RBIF=0;//Al borrar el bit RBIF despues de llamar a la funcion tecla, nos
-}           //aseguramos que después de soltar la tecla éste bit se pone a 0.
+        if(aux)
+        {
+                ByteToStr (num, txt);
+                Lcd_out(1,1, txt);
+                num++;
+                if(num == 100)
+                        num = 0;
+        }
+        aux=!aux;
+        x=PORTB; //hay que leer el puerto B para poder borrar el bit RBIF (define x global)
+        INTCON.RBIF=0;//Al borrar el bit RBIF despues de llamar a la funcion tecla, nos
+}           //aseguramos que despuï¿½s de soltar la tecla ï¿½ste bit se pone a 0.
 
 
 
 
 void main() {
-TRISB=0x10;
-PORTB=0;
-Lcd_Init();
+        TRISB=0x10;
+        PORTB=0;
+        Lcd_Init();
 
-INTCON2.RBPU=0; //se habilitan las resistencias de pullup de las entradas del PORTB
-x=PORTB;//para poder borrar el RBIF
-INTCON.RBIF=0;
-INTCON.RBIE=1;
-INTCON.GIE=1;
-while(1);
+        INTCON2.RBPU=0; //se habilitan las resistencias de pullup de las entradas del PORTB
+        x=PORTB;//para poder borrar el RBIF
+        INTCON.RBIF=0;
+        INTCON.RBIE=1;
+        INTCON.GIE=1;
+        while(1) ;
 }
