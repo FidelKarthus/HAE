@@ -21,30 +21,30 @@ void interrupt() //se ha pulsado una tecla
 
 
 
-     /*
-  num = num*16570;
-  ByteToStr (num, txt);
-  Lcd_out(1,1, txt);
-     */
-x=PORTB; //hay que leer el puerto B para poder borrar el bit RBIF (define x global)
-INTCON.RBIF=0;//Al borrar el bit RBIF despues de llamar a la funcion tecla, nos
+        /*
+           num = num*16570;
+           ByteToStr (num, txt);
+           Lcd_out(1,1, txt);
+         */
+        x=PORTB; //hay que leer el puerto B para poder borrar el bit RBIF (define x global)
+        INTCON.RBIF=0;//Al borrar el bit RBIF despues de llamar a la funcion tecla, nos
 }
 
 void main() {
-  Lcd_Init();
-  TRISB = 0x10;
-  PORTB = 0;
-  PORTB = 0x01;
-  DELAY_MS(5);
-  PORTB = 0x00;
+        Lcd_Init();
+        TRISB = 0x10;
+        PORTB = 0;
+        PORTB = 0x01;
+        DELAY_MS(5);
+        PORTB = 0x00;
 
-  INTCON2.RBPU=0; //se habilitan las resistencias de pullup de las entradas del PORTB
-  x=PORTB;//para poder borrar el RBIF
-  INTCON.RBIF=0;
-  INTCON.RBIE=1;
-  INTCON.GIE=1;
-  
-  while(1){
+        INTCON2.RBPU=0; //se habilitan las resistencias de pullup de las entradas del PORTB
+        x=PORTB;//para poder borrar el RBIF
+        INTCON.RBIF=0;
+        INTCON.RBIE=1;
+        INTCON.GIE=1;
 
-  }
+        while(1) {
+
+        }
 }

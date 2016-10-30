@@ -20,30 +20,30 @@ short algo=1;
 
 void interrupt() //se ha pulsado una tecla
 {
-if (algo==17)
-{
- algo = 1;
- lcd_cmd(_lcd_clear);
-}
-key=tecla();
-lcd_chr(1,algo,key);
-algo++;
-x=PORTB; //hay que leer el puerto B para poder borrar el bit RBIF (define x global)
-INTCON.RBIF=0;//Al borrar el bit RBIF despues de llamar a la funcion tecla, nos
-}           //aseguramos que después de soltar la tecla éste bit se pone a 0.
+        if (algo==17)
+        {
+                algo = 1;
+                lcd_cmd(_lcd_clear);
+        }
+        key=tecla();
+        lcd_chr(1,algo,key);
+        algo++;
+        x=PORTB; //hay que leer el puerto B para poder borrar el bit RBIF (define x global)
+        INTCON.RBIF=0;//Al borrar el bit RBIF despues de llamar a la funcion tecla, nos
+}           //aseguramos que despuï¿½s de soltar la tecla ï¿½ste bit se pone a 0.
 
 
 
 
 void main() {
-TRISB=0xF0;  // el nibble alto son entradas y el nibble bajo son salidas
-PORTB=0;
-Lcd_Init();
+        TRISB=0xF0; // el nibble alto son entradas y el nibble bajo son salidas
+        PORTB=0;
+        Lcd_Init();
 
-INTCON2.RBPU=0; //se habilitan las resistencias de pullup de las entradas del PORTB
-x=PORTB;//para poder borrar el RBIF
-INTCON.RBIF=0;
-INTCON.RBIE=1;
-INTCON.GIE=1;
+        INTCON2.RBPU=0; //se habilitan las resistencias de pullup de las entradas del PORTB
+        x=PORTB;//para poder borrar el RBIF
+        INTCON.RBIF=0;
+        INTCON.RBIE=1;
+        INTCON.GIE=1;
 
 }
