@@ -1,3 +1,4 @@
+/* This code shows how to use a swich */
 void main() {
         short aux=0;
         RBPU_BIT=0;

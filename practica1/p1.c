@@ -1,4 +1,4 @@
-
+/* This code just send and intermitent signal to a port */
 void main() {
         TRISC = 0X00;
         PORTC = 0X01;

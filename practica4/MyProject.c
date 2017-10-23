@@ -1,3 +1,5 @@
+/* This exmple shows how to use interruptions to put different numbers */
+/* into a 7-segments display */
 short primero = 0;
 
 void interrupt(){
