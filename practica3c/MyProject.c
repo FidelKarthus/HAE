@@ -1,3 +1,4 @@
+/* Using interruptions with a more useful example */
 short u = 0;
 short t = 0;
 

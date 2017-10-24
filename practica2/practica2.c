@@ -1,4 +1,5 @@
-
+/* This code sends the value ine the array through the specified ports */
+/* This makes a clock counter, chek the simulator */
 void main() {
 
         char array[]= {0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x67};

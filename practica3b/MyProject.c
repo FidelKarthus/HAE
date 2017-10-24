@@ -1,3 +1,4 @@
+/* This exaple shows how to use interruptions */
 void interrupt()
 {
         PORTB.B1 = !PORTB.B1;
