@@ -1,3 +1,5 @@
+
+/* This practice shows how to deal with an electronic keyboard */
 #include "Tecla12INT.h"
 // Lcd pinout settings
 sbit LCD_RS at RD2_bit;

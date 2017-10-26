@@ -1,3 +1,5 @@
+/* The use of a 7segment display */
+
 // Lcd pinout settings
 sbit LCD_RS at RD2_bit;
 sbit LCD_EN at RD3_bit;

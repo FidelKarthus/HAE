@@ -1,3 +1,4 @@
+/* Practicing interruptuios and using counters*/
 void interrupt() // rutina de servicio de la interrupci�n (MikroC)
 {
         if(PORTC.B0 == 1)   {
