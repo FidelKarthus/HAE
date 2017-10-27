@@ -1,3 +1,5 @@
+/* Use of interruptions and Timer0 */
+
 int aux=0;
 short first=0;
 void interrupt() // rutina de servicio de la interrupci�n (MikroC)
