@@ -1,3 +1,5 @@
+/* Timer Interruptions */ 
+
 // Lcd pinout settings
 sbit LCD_RS at RC2_bit;
 sbit LCD_EN at RC3_bit;
