@@ -1,3 +1,5 @@
+/* Managing analogianl and digital signals */
+
 int aux;
 int paquete;
 int paqH; paqL;

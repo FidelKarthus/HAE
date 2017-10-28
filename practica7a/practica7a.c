@@ -1,3 +1,5 @@
+/* Using some counters*/
+
 // Lcd pinout settings
 sbit LCD_RS at RD2_bit;
 sbit LCD_EN at RD3_bit;
